@@ -1,0 +1,16 @@
+# Node modules (Dashboard dependencies)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Hardhat/Foundry/Remix artifacts
+artifacts/
+cache/
+out/
+.deps/
+
+# Environment variables (Private Keys / API Keys)
+.env
+.env.local
+.shadow
