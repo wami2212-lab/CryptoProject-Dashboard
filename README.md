@@ -16,4 +16,5 @@ Explore the architecture and blueprints of the ecosystem:
 
 ---
 
-### 🏗️ Current Architecture
+### 🔒 Repository Note
+To protect project intellectual property and ensure security prior to mainnet launch, our core smart contract implementations are maintained in a private repository. The public files above, combined with our live on-chain video demonstrations on X, provide full transparency into our technical interfaces and ecosystem mechanics.
