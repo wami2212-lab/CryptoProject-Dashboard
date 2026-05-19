@@ -5,8 +5,7 @@ Welcome to the public hub for TESTTOKEN.
 ## 🗺️ Project Documentation
 Explore the architecture and blueprints of our ecosystem:
 * **[Project Roadmap](docs/Roadmap.md)** — View our development timeline and future plans.
-* **[Zero-Inflation Economics](docs/ECONOMICS.md)** — Deep dive into our fixed-supply reward mechanics and penalty model.
-* **[Smart Contract Interface](docs/INTERFACE.md)** — Technical blueprint of core functions, events, and data structures.
+* **[Zero-Inflation Economics & Smart Contract Blueprint](docs/TESTTOKEN_INTERFACE.md)** — Deep dive into our fixed-supply mechanics, penalty models, and core functions.
 
 ### 🌐 Live Demonstrations
 Check the code in action and view live on-chain video demonstrations on my **[X Account](https://x.com/CRYPTOWAMI22)**.
