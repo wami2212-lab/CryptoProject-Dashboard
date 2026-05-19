@@ -20,17 +20,9 @@ struct StakeInfo {
 // Mapping from investor wallet address to their staking profile
 mapping(address => StakeInfo) public investorStakes;
 
-// Global Pool Variables
-uint256 public totalPoolSupply;    // Hard-capped total supply
-uint256 public rewardPoolBalance;  // Active treasury funds allocated for rewards
-
-
 
 2. Core Operational Functions
-
-
 stake
-
 Allows an investor to lock up their tokens for the fixed 45-day duration.
 
 Access Control: Public (Any Investor)
@@ -44,7 +36,9 @@ Calculates 100% of the guaranteed reward immediately.
 Deducts the reward amount directly from the pre-funded Treasury pool to account for it upfront.
 
 Sets maturityTime to block.timestamp + 45 days.
+
 function stake(uint256 _amount) external;
+
 
 claim
 Allows investors to withdraw 100% of their principal and allocated rewards after the 45-day lock has successfully matured.
@@ -58,9 +52,7 @@ Validates that block.timestamp >= maturityTime.
 Transfers principalAmount + rewardAmount back to the investor's wallet.
 
 Marks the stake as inactive.
-
 function claim() external;
-
 
 emergencyExit
 The friction mechanism allowing early capital withdrawal at the cost of a penalty fee.
@@ -87,4 +79,6 @@ event Staked(address indexed investor, uint256 principal, uint256 reward, uint25
 event Claimed(address indexed investor, uint256 totalWithdrawn);
 event EmergencyWithdrawn(address indexed investor, uint256 returnedPrincipal, uint256 penaltyDeducted);
 
-
+// Global Pool Variables
+uint256 public totalPoolSupply;    // Hard-capped total supply
+uint256 public rewardPoolBalance;  // Active treasury funds allocated for rewards
